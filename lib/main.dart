@@ -28,6 +28,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  bool _enableFingerPrint = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,6 +41,12 @@ class _MyHomePageState extends State<MyHomePage> {
           ListTile(
             title: Text('การตั้งค่า'),
           ),
+          SwitchListTile(
+            title: Text('ใช้ลายนิ้วมือในการเข้าใช้'),
+            value: _enableFingerPrint,
+            onChanged: (bool value) {
+            },
+          )
         ],
       ),
     );

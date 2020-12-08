@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:toast/toast.dart';
 
 void main() {
   runApp(MyApp());
@@ -48,6 +49,9 @@ class _MyHomePageState extends State<MyHomePage> {
               setState(() {
                 _enableFingerPrint = value;
 
+                if (_enableFingerPrint) {
+                  Toast.show("เปิดการใช้งานตัวแสกนลายนิ้วมือแล้ว", context);
+                }
               });
             },
           )

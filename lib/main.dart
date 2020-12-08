@@ -45,6 +45,10 @@ class _MyHomePageState extends State<MyHomePage> {
             title: Text('ใช้ลายนิ้วมือในการเข้าใช้'),
             value: _enableFingerPrint,
             onChanged: (bool value) {
+              setState(() {
+                _enableFingerPrint = value;
+
+              });
             },
           )
         ],

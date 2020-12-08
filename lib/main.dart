@@ -31,9 +31,16 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text(widget.title),
-        ),
-        body: Container());
+      appBar: AppBar(
+        title: Text(widget.title),
+      ),
+      body: ListView(
+        children: [
+          ListTile(
+            title: Text('การตั้งค่า'),
+          ),
+        ],
+      ),
+    );
   }
 }
